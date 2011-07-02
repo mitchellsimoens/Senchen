@@ -11,5 +11,6 @@ Ext.create('Ext.app.Application', {
     autoCreateViewport : true,
 
     controllers: [
+        'Senchen.controller.Base'
     ]
 });

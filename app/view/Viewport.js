@@ -1,18 +1,29 @@
-Ext.define('MC.view.Viewport', {
+Ext.define('Senchen.view.Viewport', {
     extend : 'Ext.container.Viewport',
 
     requires: [
-    ],
-
-    uses : [
+        'Senchen.view.region.Main'
     ],
 
     layout : 'fit',
 
     items  : [
         {
-            xtype : 'container',
-            html  : 'hi'
+            xtype       : 'panel',
+            border      : false,
+            frame       : true,
+            layout      : 'fit',
+            padding     : 0,
+
+            dockedItems : [
+                { xtype : 'region-leftdock' }
+            ],
+
+            items       : [
+                {
+                    xtype : 'region-main'
+                }
+            ]
         }
     ]
 });
