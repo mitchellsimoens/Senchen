@@ -31,7 +31,7 @@ Ext.define('Senchen.view.region.LeftDock', {
                 xtype       : 'fieldset',
                 collapsible : true,
                 title       : 'ACCOUNT',
-                items       : me.buildDataView('Account')
+                items       : me.buildAccountDataView()
             },
             {
                 xtype       : 'fieldset',
@@ -40,6 +40,18 @@ Ext.define('Senchen.view.region.LeftDock', {
                 items       : me.buildDataView('Report')
             }
         ];
+    },
+
+    buildAccountDataView: function() {
+        return {
+            xtype        : 'dataview',
+            itemSelector : 'div.left-dock-item',
+            tpl          : new Ext.XTemplate(
+                '<tpl for=".">',
+                    '<div class="left-dock-item">{accountName}</div>',
+                '</tpl>'
+            )
+        };
     },
 
     buildDataView: function(type) {
@@ -68,12 +80,6 @@ Ext.define('Senchen.view.region.LeftDock', {
             { name : 'Last Download'          },
             { name : 'Category Explorer'      },
             { name : 'Accounts Summary'       }
-        ];
-    },
-
-    getAccountData: function() {
-        return [
-            { name : 'Account List Here' }
         ];
     },
 

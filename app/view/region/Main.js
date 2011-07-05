@@ -1,17 +1,17 @@
 Ext.define('Senchen.view.region.Main', {
-    extend : 'Ext.panel.Panel',
+    extend : 'Ext.container.Container',
     alias  : 'widget.region-main',
 
     requires : [
         'Senchen.view.region.AccountOverview',
-        'Senchen.view.region.LeftDock',
         'Senchen.view.region.Overview'
     ],
 
-    border      : false,
+    cls         : 'main-panel',
     frame       : true,
     layout      : {
-        type : 'hbox'
+        type  : 'hbox',
+        align : 'stretch'
     },
     padding     : 20,
 

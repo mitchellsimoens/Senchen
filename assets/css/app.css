@@ -1,3 +1,7 @@
+.main-panel {
+    background-color: #9CCEF3;
+}
+
 .left-dock {
     background-color: #EDF3F7;
 }
@@ -40,8 +44,8 @@
     font-size: 20px;
 }
 .overview .x-panel-body {
-    border-top-color: #000000;
     background: transparent;
+    border-top-color: #000000;
 }
 
 .account-overview {
@@ -58,8 +62,20 @@
     border-left: 0;
 }
 .account-overview .x-panel-header {
-    background-color: transparent;
+    background: transparent;
+}
+.account-overview .x-panel-header span {
+    color: #000000;
+    font-size: 15px;
 }
 .account-overview .x-panel-body {
     background-color: transparent;
+    border-top-color: #000000;
+}
+
+.bottom-dock {
+    background: #A7A7A7;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A7A7A7', endColorstr='#909090');
+    background: -webkit-gradient(linear, left top, left bottom, from(#A7A7A7), to(#909090));
+    background: -moz-linear-gradient(top,  #A7A7A7,  #909090);
 }

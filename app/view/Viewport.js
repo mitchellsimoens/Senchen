@@ -2,7 +2,11 @@ Ext.define('Senchen.view.Viewport', {
     extend : 'Ext.container.Viewport',
 
     requires: [
-        'Senchen.view.region.Main'
+        'Senchen.view.region.BottomDock',
+        'Senchen.view.region.LeftDock',
+        'Senchen.view.region.Main',
+
+        'Senchen.view.form.AddAccount'
     ],
 
     layout : 'fit',
@@ -16,7 +20,8 @@ Ext.define('Senchen.view.Viewport', {
             padding     : 0,
 
             dockedItems : [
-                { xtype : 'region-leftdock' }
+                { xtype : 'region-bottomdock' },
+                { xtype : 'region-leftdock'   }
             ],
 
             items       : [
